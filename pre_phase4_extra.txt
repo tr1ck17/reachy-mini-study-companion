@@ -1,0 +1,20 @@
+Possible things to add in at this point (beyond just more complex logic):
+	if question missed more than once:
+		slow speech down, and add more encouragement
+	if perfect scores:
+		harder question list next time (multiple question lists of varying difficulty)
+	if student struggling with improvement:
+		the effort, or trials, will be praised, not whether correct or not
+	
+	
+Potential to add a student profile, for adaptive logic?
+	ex:
+	student_profile = {
+		"got_correct_answers": 0, # initial scores
+		"got_incorrect_answers": 0
+	}
+	updates after each answer, and behavior of reachy changes accordingly:
+		if student profile has more than 2 incorrect answers per question list, then add more encouragement, more personal message (e.g. You're doing good, let's go a little slower)
+	Above is suggestion from AI Model: Add in adaptive decision making
+
+Later down road maybe we can add speech-to-text, LLM for dynamic question generation, and personalized lesson plan based on student answers? Improved questioning will be needed as students get older or progress

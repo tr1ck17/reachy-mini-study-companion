@@ -1,0 +1,91 @@
+Reachy Mini Project: Tutor For Children (Phase 1)
+
+1 subject to start: math
+	method: flashcard-esque
+3 questions only for now
+script for bot: greeting->question->correct/incorrect response->encouragement
+gestures for each response:
+	Greeting->wave
+	Correct response->nod and clap
+	Incorrect Response->shake head
+	Ending: arm raise / wave
+
+State machine:
+	Greeting
+	Question
+	Evaluate
+	Feedback
+	Next Question / End
+
+run demo loop once hardcoding complete
+adjust code accordingly to ensure pauses for natural gesture timing, speech clarity, and waiting for response from child
+
+this gives our desired novelty: human-like interactions, physical bot, tutor for children = innovative idea
+
+will go through some runs and fix any breaks in loop
+
+need to check that gestures and speech are in sync; else unnatural
+
+pitch: This prototype shows how an AI powered robot can improve attention and engagement by guiding repetition, giving feedback immediately, along with gestures, and encouraging participation from the participant along the way
+
+for now, on time limit: 3 questions, 1 skill, loop
+
+current python outline/pseudocode file:
+for now, runs on sim program, will have to replace with Reachy API
+
+# import section
+from reachy_mini import Reachy
+import time (for pausing, etc)
+
+# questions section
+question list:
+questions = [
+	{"question1": "whats this?", "answer": "this"},
+	{"question2": "whats this?", "answer": "this"},
+	{"question3": "whats this?", "answer": "this"},
+]
+
+# gestures
+def wave():			# for greeting
+	(work on code setup)
+
+def nod():			# for correct answers
+	(code later)
+
+def shake():			# for incorrect answers
+	(code later)
+
+def clap():			# encouragement / correct answers
+	(code later)
+
+# speech functions
+def speak(text):		# will take hardcoded speech input for now
+	(code later, implement pausing as well, api needed too?)
+
+# demo loop for testing
+def run_demo():
+	call wave function
+	call speak function with greeting text
+
+	use 'for' loop, loop through questions in list:
+		call speak function on current question in list
+
+		# wait for input (for now, keyboard?)
+		define answerinput for user = input("Answer?: ")	# we can replace this with voice later I think
+
+		if user answer == the question answer key
+			call nod func
+			call clap func
+			call speak func with custom text, indicate moving on to next question
+			ensure functions synch properly
+
+		else question wrong:
+			call shake func
+			call speak func with custom, re-encouraging text, move on to next problem or try again
+
+		call speak func, encouragement, support, and goodbye
+		call wave func
+
+# main run function
+if __name__ == "__main__":
+	run_demo()	

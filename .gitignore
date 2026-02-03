@@ -1,0 +1,13 @@
+reachy_mini_env/
+
+__pycache__/
+*.pyc
+
+*.pyo
+*.pyd
+*.swp
+
+.DS_Store
+Thumbs.db
+
+.env
