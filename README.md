@@ -25,6 +25,7 @@ Using Powershell (like me):
   Download and install Git for windows:
     Command: git lfs install
   Create virtual environment:
+    WARNING: Move INTO the project directory before creating virtual environemnt, ex: cd reachy-mini-study-companion (after cloning inside the directory you want)
     Command: uv venv reachy_mini_env --python 3.12
   Activate the environment:
       WARNING: Before activation in powershell, open powershell as admin and run: powershell Set-ExecutionPolicy RemoteSigned
