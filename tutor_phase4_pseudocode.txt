@@ -1,0 +1,20 @@
+tutor_phase4_pseudocode
+
+student_profile = {
+    "correct": 0,
+    "incorrect": 0,
+    "streak": 0
+}
+
+for question in questions:
+    ask_question(question)
+    update_profile(answer)
+
+    if student_profile["streak"] >= 3:
+        speak(mini, "You’re on fire! Here’s a slightly harder one!")
+
+    if student_profile["incorrect"] >= 2:
+        speak(mini, "Let's slow down a little and review the tricky ones")
+
+easy questions -> medium questions -> hard questions: lists
+
